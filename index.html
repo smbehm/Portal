@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Granim Gradient Tunnel - 20 Additional Gradients & Faster</title>
+  <style>
+    /* CSS for the canvas to fill the entire viewport */
+    #canvas-basic {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- The canvas element that Granim will use -->
+  <canvas id="canvas-basic"></canvas>
+
+  <!-- Granim.js Library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/granim@2.0.0/dist/granim.min.js"></script>
+
+  <script>
+    // JavaScript to initialize the Granim instance with 20 additional gradients and a faster animation speed
+    var granimInstance = new Granim({
+      element: '#canvas-basic',
+      direction: 'radial',
+      isPausedWhenNotInView: true,
+      states : {
+        "default-state": {
+          gradients: [
+            ['#ff9966', '#ff5e62'],   // Warm orange to red
+            ['#0575E6', '#00aaff'],   // Two blue tones
+            ['#e1eec3', '#f05053'],   // Soft pastel and red
+            ['#001eff', '#4facfe'],   // Deep blue to sky blue
+            ['#ff6e7f', '#bfe9ff'],   // Soft pink to light blue
+            ['#16a085', '#f4d03f'],   // Green to yellow
+            ['#2c3e50', '#3498db'],   // Dark to bright blue
+            ['#d76d77', '#ffaf7b'],   // Pink to peach
+            ['#36d1dc', '#5b86e5'],   // Light blue to deeper blue
+            ['#ffafbd', '#ffc3a0'],   // Soft pink gradient
+            ['#c94b4b', '#4b134f'],   // Deep red to dark purple
+            ['#004ff9', '#fff94c'],   // Blue to yellow
+            ['#1f4037', '#99f2c8'],   // Dark green to soft green
+            ['#fc466b', '#3f5efb'],   // Pink to blue
+            ['#007991', '#78ffd6'],   // Blue to teal
+            ['#654ea3', '#eaafc8'],   // Purple to light pink
+            ['#ff0099', '#493240'],   // Hot pink to deep brown
+            ['#e44d26', '#f16529'],   // Bold red to orange
+            ['#4568dc', '#b06ab3'],   // Blue to purple
+            ['#ff4b1f', '#1fddff'],   // Bright red to light blue
+            ['#ff512f', '#dd2476'],   // Red to pink
+            ['#22c1c3', '#fdbb2d'],   // Teal to yellow
+            ['#30cfd0', '#330867'],   // Light blue to dark purple
+            ['#6a11cb', '#2575fc']    // Purple to blue
+          ],
+          transitionSpeed: 4000 // Speed of transitions between gradients (faster)
+        }
+      }
+    });
+  </script>
+</body>
+</html>
