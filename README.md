@@ -35,12 +35,30 @@ This repository contains a Kazbah-inspired static demo page with a scroll-scrubb
 
 - Ensure the remote video link remains publicly accessible for the scroll-scrubbing effect to work.
 - The demo intentionally pauses the video so that scroll position fully controls playback.
-- Changes made inside this Codespace/container live only in the local Git clone until you push them to GitHub.
-- To publish updates to your public repository run:
-  ```bash
-  git add .
-  git commit -m "Describe your changes"
-  git push origin main
-  ```
-  Replace `main` with the branch you want to update. Once the push finishes, GitHub will show the new "last updated"
-  timestamp and the preview links will reflect the latest commit.
+
+### Publishing the changes to your GitHub repository
+
+Everything you edit inside this container stays local until you push it to a GitHub remote. If your repository
+still shows an older timestamp, it means the latest commits have not been pushed yet. Use the steps below to
+publish the current work:
+
+1. Verify the remote is configured:
+   ```bash
+   git remote -v
+   ```
+   If you see no output, add your GitHub repository as the `origin` remote (replace the URL with your own):
+   ```bash
+   git remote add origin https://github.com/smbehm/Portal.git
+   ```
+2. Stage and commit the updates:
+   ```bash
+   git add .
+   git commit -m "Describe your changes"
+   ```
+3. Push the branch to GitHub (replace `main` with whichever branch you want to update):
+   ```bash
+   git push origin main
+   ```
+
+Once the push succeeds, refresh the GitHub page; the "last updated" time and the preview links will now reflect the
+new commit.
