@@ -7,8 +7,10 @@
   <style>
     :root {
       color-scheme: dark light;
-      --primary-bg: #0a0a0a;
+      --primary-bg: #050505;
       --primary-text: #f5f5f5;
+      --surface-bg: rgba(13, 13, 13, 0.88);
+      --surface-border: rgba(255, 255, 255, 0.06);
       --accent: #ff7043;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
@@ -19,8 +21,12 @@
       padding: 0;
     }
 
-    body {
+    html {
       background: var(--primary-bg);
+    }
+
+    body {
+      background: radial-gradient(circle at top, #111 0%, #050505 45%, #020202 100%);
       color: var(--primary-text);
       line-height: 1.6;
       min-height: 100vh;
@@ -50,6 +56,16 @@
       padding: clamp(3rem, 8vw, 6rem) 5vw;
     }
 
+    .surface {
+      margin: clamp(2rem, 6vw, 4rem) auto;
+      max-width: min(1100px, 95vw);
+      background: var(--surface-bg);
+      border-radius: 1.75rem;
+      border: 1px solid var(--surface-border);
+      box-shadow: 0 28px 60px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+    }
+
     .intro {
       max-width: 70ch;
       margin: 0 auto;
@@ -63,17 +79,18 @@
     }
 
     .card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 1rem;
+      background: rgba(10, 10, 10, 0.78);
+      border-radius: 1.2rem;
       padding: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 28px 65px rgba(0, 0, 0, 0.6);
+      background: rgba(18, 18, 18, 0.85);
     }
 
     .scroll-video-section {
@@ -85,6 +102,12 @@
       text-align: center;
       overflow: hidden;
       isolation: isolate;
+      background: linear-gradient(160deg, rgba(4, 4, 4, 0.95), rgba(8, 8, 8, 0.7));
+      border-radius: 1.75rem;
+      margin: clamp(2rem, 6vw, 4rem) auto;
+      max-width: min(1200px, 96vw);
+      border: 1px solid var(--surface-border);
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
     }
 
     .scroll-video-section video {
@@ -94,7 +117,7 @@
       height: 100%;
       object-fit: cover;
       z-index: -2;
-      filter: saturate(1.05) contrast(1.1);
+      filter: saturate(1.05) contrast(1.1) brightness(0.9);
       pointer-events: none;
     }
 
@@ -104,12 +127,12 @@
       max-width: 60ch;
       background: linear-gradient(
         135deg,
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0.35)
+        rgba(5, 5, 5, 0.75),
+        rgba(10, 10, 10, 0.55)
       );
-      border-radius: 1.5rem;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+      border-radius: 1.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
     }
 
     .scroll-video-overlay h2 {
@@ -127,8 +150,10 @@
     footer {
       padding: 4rem 5vw 6rem;
       text-align: center;
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(255, 255, 255, 0.55);
       font-size: 0.9rem;
+      background: linear-gradient(180deg, rgba(8, 8, 8, 0.9), rgba(5, 5, 5, 0.95));
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -147,7 +172,7 @@
     <h1>Kazbah Collective</h1>
   </header>
   <main>
-    <section class="intro">
+    <section class="intro surface">
       <h2>Culture, Sound &amp; Story</h2>
       <p>
         This lightweight mock-up captures the moody, cinematic vibe of Kazbah.org while showcasing a
@@ -185,7 +210,7 @@
       </div>
     </section>
 
-    <section class="intro">
+    <section class="intro surface">
       <h2>After the Fade</h2>
       <p>
         Continue the page with feature stories, merch drops, or embedded playlists. The scroll-driven video
