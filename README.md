@@ -4,10 +4,12 @@ This repository contains a Kazbah-inspired static demo page with a scroll-scrubb
 
 ## Instant Live Preview
 
-- [Open the demo page now](https://htmlpreview.github.io/?https://raw.githubusercontent.com/smbehm/Portal/main/index.html)
+- [Open the demo page now](https://htmlpreview.github.io/?https://github.com/smbehm/Portal/blob/main/index.html)
   (powered by the community `htmlpreview.github.io` service).
   - If the page shows a 404, make sure the repository is public; the HTMLPreview service
     cannot access private repositories. Once the repo is public the link above will work.
+  - The service expects a standard `github.com/.../blob/...` URL; avoid using the raw file
+    link because it will redirect and produce a blank page inside the preview frame.
 
 ## Live Preview Options
 
