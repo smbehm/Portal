@@ -35,3 +35,12 @@ This repository contains a Kazbah-inspired static demo page with a scroll-scrubb
 
 - Ensure the remote video link remains publicly accessible for the scroll-scrubbing effect to work.
 - The demo intentionally pauses the video so that scroll position fully controls playback.
+- Changes made inside this Codespace/container live only in the local Git clone until you push them to GitHub.
+- To publish updates to your public repository run:
+  ```bash
+  git add .
+  git commit -m "Describe your changes"
+  git push origin main
+  ```
+  Replace `main` with the branch you want to update. Once the push finishes, GitHub will show the new "last updated"
+  timestamp and the preview links will reflect the latest commit.
